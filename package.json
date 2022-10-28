@@ -1,0 +1,27 @@
+{
+  "name": "lab5",
+  "version": "1.0.0",
+  "description": "API app using Express.js(A web framework for Node.js)",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intotito/Data_Rep_Lab5.git"
+  },
+  "keywords": [
+    "express",
+    "react",
+    "data_rep_query"
+  ],
+  "author": "Otito Mbelu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/intotito/Data_Rep_Lab5/issues"
+  },
+  "homepage": "https://github.com/intotito/Data_Rep_Lab5#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1"
+  }
+}
