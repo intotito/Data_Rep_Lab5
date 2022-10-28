@@ -8,7 +8,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 const port = 3000
-
+/*
+* Javascript Object that will be sent to clients as JSON
+*/
 var data = {
   "books": [
     {
@@ -50,41 +52,56 @@ var data = {
   ]
 }
 
-
+/*
+* Service GET request from root page
+*/
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+/*
+* Service GET request from /datarep
+*/
 app.get('/datarep', (req, res) => {
   console.log(req.path);
   res.send('Welcome to Data Representation and Querying');
 })
-
+/*
+* Service GET request redirected to /name
+*/
 app.get('/name', (req, res)=>{
+  console.log(req);
   res.send('Hello ' + req.query.fname + ' ' + req.query.lname);
 })
+/*
+* Service POST request redirected to /name
+*/
 app.post('/name', (req, res)=>{
   res.send('Hello ' + req.body.fname + ' ' + req.body.lname);
- console.log(req.body);
- res.send('Hello from post');
 })
 
-//app.get('/*', (req, res)=>{
-// res.send(req.path.substring(req.path.lastIndexOf('/') + 1));
-//})
-
+/*
+* Service GET request from /hello and echo back parameter
+*/
 app.get('/hello/:name', (req, res) => {
   res.send('Hello ' + req.params.name);
 })
-
+/*
+* Service GET request from /api/books and return a JSON version of 
+* the object - data.
+*/
 app.get('/api/books', (req, res) => {
   res.json({mybooks:data});
 })
-
+/*
+* Service GET request from /test and send back a HTML file 'index.html'
+*/
 app.get('/test', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 })
-
+/*
+* Start service by listening on a chosen port
+*/
 app.listen(port, () => {
   console.log(`Server app listening on port ${port}`)
 })

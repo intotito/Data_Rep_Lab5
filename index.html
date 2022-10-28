@@ -11,30 +11,23 @@
 </head>
 
 <body>
-    <div class="form-group">
-        <label for="usr">First Name:</label>
-        <input type="text" class="form-control" id="usr">
-    </div>
-    <div class="form-group">
-        <label for="pwd">Last Name:</label>
-        <input type="password" class="form-control" id="pwd">
-    </div>
+
+    <h1>Get</h1>
+    <form action="/name" method="get" target="_blank" CLASS="form-group">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+    <h1>Post</h1>
+    <form action="/name" method="post" target="_blank">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
 </body>
-<h1>Get</h1>
-<form action="/name" method="get" target="_blank">
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value="John"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value="Doe"><br><br>
-    <input type="submit" value="Submit">
-</form>
-<h1>Post</h1>
-<form action="/name" method="post" target="_blank">
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value="John"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value="Doe"><br><br>
-    <input type="submit" value="Submit">
-</form>
 
 </html>
